@@ -6,8 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css" >
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/bootstrap.min.css" >
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script>
-        <script src="<?php echo get_stylesheet_directory_uri() ?>/js/bootstrap.min.js"></script>
     </head>
     <body>
     <nav class="navbar overflow-hidden fixed-top navbar-expand-lg bg-body-tertiary">
@@ -52,8 +50,8 @@
           <div class="carousel-inner">
             <div class="carousel-item active imgItem">
             <img src="<?php echo get_stylesheet_directory_uri() ?>/images/slide-1.png" class="d-block w-100 imgfilter" alt="Slide1">
-              <div class="carousel-caption top-0 mt-5">
-                <h1 class="mt-5 display-1 fw-bolder text-capitalize d-md-block">Expertise, Answers, and Access to the Greatest Network</h1>
+              <div class="carousel-caption top-0 mt-5 justify-content-center align-items-center">
+                <h1 class="mt-5 display-1 fw-bolder text-capitalize textOverlay ">Expertise, Answers, and Access to the Greatest Network</h1>
               </div>
             </div>
             <div class="carousel-item imgItem">
@@ -94,7 +92,7 @@
         <div class="container text-center my-3">
     <h2 class="font-weight-light">EXCLUSIVE LISTINGS</h2>
     <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="recipeCarousel" class="carousel slide exclusiveCarousel" data-bs-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="col-md-3">
@@ -165,24 +163,33 @@
             </a>
         </div>
     </div>
-    <h5 class="mt-2 fw-light"></h5>
-    <script>let items = document.querySelectorAll('.carousel .carousel-item')
+    <div class="container-fluid bgMaster" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/images/bg-image.png');">
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/meet.png" class="img-fluid mt-5 p-5">
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <h3 class="fw-bold mt-5 p-4">Meet Juliette Hohnen</h3>
+          <p class="lh-base text-justify fs-6">
+          One of The Hollywood Reporter’s Top 30 Hollywood Real Estate Agents, Juliette Hohnen is an unstoppable force in the Los Angeles real estate market. With over 16 years of experience as a Realtor and developer/house flipper, 
+          Juliette has unparalleled knowledge of the Southern California residential real estate market, working in Beverly Hills, Bel Air, Brentwood, Pacific Palisades, Santa Monica, Venice, Malibu, Hancock Park, Hollywood Hills, Los Feliz, Ojai and across the greater Los Angeles area. 
+          As a Brit who worked as a journalist at MTV in the 90s, Juliette’s extensive client list includes performers, producers, and executives from the entertainment industry, entrepreneurs, investors, designers, artists, and creative types, from California, the East Coast, the United Kingdom, Australia, Europe and beyond. Leveraging these connections and building solid relationships within the real estate 
+          </p>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <p class="lh-base text-justifu fs-6 mt-5 p-3" >
+          One of The Hollywood Reporter’s Top 30 Hollywood Real Estate Agents, Juliette Hohnen is an unstoppable force in the Los Angeles real estate market. With over 16 years of experience as a Realtor and developer/house flipper, 
+          Juliette has unparalleled knowledge of the Southern California residential real estate market, working in Beverly Hills, Bel Air, Brentwood, Pacific Palisades, Santa Monica, Venice, Malibu, Hancock Park, Hollywood Hills, Los Feliz, Ojai and across the greater Los Angeles area. 
+          As a Brit who worked as a journalist at MTV in the 90s, Juliette’s extensive client list includes performers, producers, and executives from the entertainment industry, entrepreneurs, investors, designers, artists, and creative types, from California, the East Coast, the United Kingdom, Australia, Europe and beyond. Leveraging these connections and building solid relationships within the real estate 
+          </p>
+        </div>
+      </div>
+    </div>
 
-items.forEach((el) => {
-    const minPerSlide = 4
-    let next = el.nextElementSibling
-    for (var i=1; i<minPerSlide; i++) {
-        if (!next) {
-            // wrap carousel by using first child
-        	next = items[0]
-      	}
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-    }
-})</script>
-</div>
+    <!-- <img src="<?php echo get_stylesheet_directory_uri() ?>/images/meet.png" class="img-fluid" alt="..."> -->
+    </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/js/bootstrap.min.js"></script>
     </body>
 </html>
